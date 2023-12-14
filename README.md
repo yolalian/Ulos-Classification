@@ -1,4 +1,4 @@
-# Ulos-Classification-
+# Ulos-Classification
 
 Title: Klasifikasi Ulos Batak Berdasarkan Etnis Menggunakan Pendekatan Convolutional Neural Network. 
 
