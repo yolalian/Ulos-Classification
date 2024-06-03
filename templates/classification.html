@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='classification.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Classification Result</h1>
+      {% if prediction %}
+      <div class="result">
+        <h2>Prediction: {{ prediction['label'] }}</h2>
+        <p>{{ prediction['description'] }}</p>
+        <img src="{{ img_path }}" alt="Uploaded Image" />
+        <form action="/delete" method="POST">
+          <input type="hidden" name="img_path" value="{{ img_path }}" />
+          <button type="submit" class="delete-btn">Delete</button>
+        </form>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

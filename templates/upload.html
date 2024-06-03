@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='upload.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload an Image</h1>
+      <form id="upload-form" action="/submit" method="POST" enctype="multipart/form-data">
+        <input id="file-upload" type="file" name="my_image" accept="image/*" required />
+        <label for="file-upload" class="upload-label">Choose Image</label>
+        <div id="filename-info" class="hidden"></div>
+        <button type="submit" class="upload-btn" id="submit-btn" disabled>Upload</button>
+      </form>
+      <div id="notification" class="hidden"></div>
+    </div>
+    <script>
+      document.getElementById("file-upload").addEventListener("change", function (event) {
+        var filename = this.files[0].name;
+        document.getElementById("filename-info").innerText = "Selected file: " + filename;
+        document.getElementById("filename-info").classList.remove("hidden");
+        document.getElementById("submit-btn").removeAttribute("disabled");
+      });
+
+      document.getElementById("upload-form").addEventListener("submit", function (event) {
+        var filename = document.getElementById("file-upload").files[0].name;
+        document.getElementById("notification").innerText = "Image '" + filename + "' uploaded successfully!";
+        document.getElementById("notification").classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
