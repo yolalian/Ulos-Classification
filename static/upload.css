@@ -1,0 +1,84 @@
+/* upload.css */
+
+.container {
+    background: #d0e6a5; /* Hijau muda */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #6b4226; /* Coklat tua */
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-btn {
+    background-color: #4caf50; /* Hijau tua */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.upload-btn:hover {
+    background-color: #388e3c; /* Hijau tua lebih gelap */
+    transform: translateY(-3px);
+}
+
+.upload-label {
+    display: inline-block;
+    background-color: #4caf50; /* Hijau tua */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.upload-label:hover {
+    background-color: #388e3c; /* Hijau tua lebih gelap */
+}
+
+.hidden {
+    display: none;
+}
+
+#filename-info {
+    color: #6b4226; /* Coklat tua */
+    font-size: 14px;
+}
+
+#notification {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #8bc34a; /* Hijau cerah */
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
